@@ -1,0 +1,16 @@
+---
+version: '3'
+services:
+  mudserver:
+    image: cmattoon/dead-souls:v3.9
+    build:
+      context: .
+      args:
+        DS_VERSION: 3.9
+        VCS_REF: docker-compose
+        BUILD_DATE: unknown
+    volumes:
+      - ./dsdata/config:/opt/deadsouls/config
+      - ./dsdata/custom-lib:/opt/deadsouls/lib
+    ports:
+      - 6666:6666

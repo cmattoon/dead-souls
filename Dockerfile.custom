@@ -1,0 +1,7 @@
+FROM cmattoon/dead-souls:v3.9
+
+WORKDIR /opt/deadsouls
+
+COPY my-repo/lib /opt/deadsouls/my-lib
+
+COPY my-repo/mudos.cfg /opt/deadsouls/config/mudos.cfg
